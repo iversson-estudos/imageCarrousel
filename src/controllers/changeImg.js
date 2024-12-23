@@ -1,23 +1,46 @@
 function changeImg(upOrDown) {
-  const imgShown = document.getElementById("image");
-  let counter = parseInt(imgShown.textContent);
-  const arrayOfImgs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const imgSlide = document.getElementsByClassName("image");
 
-  if (upOrDown == "previous") {
-    if (counter == 0) {
-      counter = arrayOfImgs.length;
+  const leftImg = imgSlide[0];
+  const mainImg = imgSlide[1];
+  const rightImg = imgSlide[2];
+
+  const arrayOfImgs = ["A", "B", "C", "D", "E"];
+
+  let mainImgIndex = arrayOfImgs.findIndex(
+    (element) => element == mainImg.textContent,
+  );
+  let leftImgIndex = arrayOfImgs.findIndex(
+    (element) => element == leftImg.textContent,
+  );
+  let rightImgIndex = arrayOfImgs.findIndex(
+    (element) => element == rightImg.textContent,
+  );
+
+  if (upOrDown == "next") {
+    if (mainImgIndex == arrayOfImgs.length - 1) {
+      mainImgIndex = 0;
+      leftImgIndex++;
+      rightImgIndex++;
+    } else if (rightImgIndex == arrayOfImgs.length - 1) {
+      rightImgIndex = 0;
+      mainImgIndex++;
+      leftImgIndex++;
+    } else if (leftImgIndex == arrayOfImgs.length - 1) {
+      leftImgIndex = 0;
+      mainImgIndex++;
+      rightImgIndex++;
     } else {
-      counter--;
+      mainImgIndex++;
+      rightImgIndex++;
+      leftImgIndex++;
     }
-    imgShown.textContent = counter;
-  } else {
-    if (counter == arrayOfImgs.length) {
-      counter = 0;
-    } else {
-      counter++;
-    }
-    imgShown.textContent = counter;
   }
+  leftImg.textContent = arrayOfImgs[leftImgIndex];
+  rightImg.textContent = arrayOfImgs[rightImgIndex];
+  mainImg.textContent = arrayOfImgs[mainImgIndex];
+
+  console.log(leftImgIndex, mainImgIndex, rightImgIndex);
 }
 
 export { changeImg };

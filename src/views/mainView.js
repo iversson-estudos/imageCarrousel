@@ -6,7 +6,9 @@ function mainView() {
   main.innerHTML = `
     <div class="slide">
       <span id="previous"> < </span>
-      <div id="image">1</div>
+      <div class="image left">A</div>
+      <div class="image principal">B</div>
+      <div class="image right">C</div>
       <span id="next"> > </span>
     </div>
     `;

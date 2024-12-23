@@ -146,7 +146,7 @@ body {
         user-select: none;
       }
 
-      #image {
+      .image {
         background-color: rosybrown;
         flex-grow: 1;
         align-content: center;
