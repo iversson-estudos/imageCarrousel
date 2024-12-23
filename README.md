@@ -1,13 +1,2 @@
-WEBPACK
-DEV MODE
-INDEX.JS -> ENTRY POINT
-
-SUPPORT ADDED:
-HTML
-CSS
-IMG in JS
-LIVE SERVER WEBPACK -> http://localhost:8080/
-ESLINT -> npx eslint yourfile.js
-PRETTIER  -> prettier --write folder/files
-
-CLONE AND RUN "npm install" TO INSTALL ALL DEPENDENCIES
+IMAGE CARROUSEL  EXERCISE FROM PROJECT ODIN
+LINK OF EXERCISE:https://www.theodinproject.com/lessons/node-path-javascript-dynamic-user-interface-interactions
