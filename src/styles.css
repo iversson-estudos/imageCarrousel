@@ -127,3 +127,33 @@ table {
   border-spacing: 0;
 }
 /*END OF CSS RESET*/
+
+body {
+  #main {
+    .slide {
+      font-size: 48px;
+      display: flex;
+      height: 400px;
+      width: 100vw;
+      margin-top: 40px;
+
+      span {
+        align-self: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 16px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      #image {
+        background-color: rosybrown;
+        flex-grow: 1;
+        align-content: center;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+  }
+}
