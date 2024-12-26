@@ -1,11 +1,11 @@
+const arrayOfImgs = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
 function changeImg(upOrDown) {
   const imgSlide = document.getElementsByClassName("image");
 
   const leftImg = imgSlide[0];
   const mainImg = imgSlide[1];
   const rightImg = imgSlide[2];
-
-  const arrayOfImgs = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
 
   let mainImgIndex = arrayOfImgs.findIndex(
     (element) => element == mainImg.textContent,
@@ -62,4 +62,4 @@ function changeImg(upOrDown) {
   console.log(leftImgIndex, mainImgIndex, rightImgIndex);
 }
 
-export { changeImg };
+export { changeImg, arrayOfImgs };
