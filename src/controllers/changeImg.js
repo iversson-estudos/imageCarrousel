@@ -5,7 +5,7 @@ function changeImg(upOrDown) {
   const mainImg = imgSlide[1];
   const rightImg = imgSlide[2];
 
-  const arrayOfImgs = ["A", "B", "C", "D", "E"];
+  const arrayOfImgs = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
 
   let mainImgIndex = arrayOfImgs.findIndex(
     (element) => element == mainImg.textContent,
@@ -35,7 +35,26 @@ function changeImg(upOrDown) {
       rightImgIndex++;
       leftImgIndex++;
     }
+  } else if (upOrDown == "previous") {
+    if (mainImgIndex == 0) {
+      mainImgIndex = arrayOfImgs.length - 1;
+      leftImgIndex--;
+      rightImgIndex--;
+    } else if (rightImgIndex == 0) {
+      rightImgIndex = arrayOfImgs.length - 1;
+      mainImgIndex--;
+      leftImgIndex--;
+    } else if (leftImgIndex == 0) {
+      leftImgIndex = arrayOfImgs.length - 1;
+      mainImgIndex--;
+      rightImgIndex--;
+    } else {
+      mainImgIndex--;
+      rightImgIndex--;
+      leftImgIndex--;
+    }
   }
+
   leftImg.textContent = arrayOfImgs[leftImgIndex];
   rightImg.textContent = arrayOfImgs[rightImgIndex];
   mainImg.textContent = arrayOfImgs[mainImgIndex];
