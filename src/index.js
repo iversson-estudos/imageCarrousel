@@ -4,4 +4,4 @@ import { changeImg } from "./controllers/changeImg";
 
 mainView();
 
-setInterval(() => changeImg("next"), 500);
+setInterval(() => changeImg("next"), 5000);
